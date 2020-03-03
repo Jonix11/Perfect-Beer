@@ -3,17 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		AC88883A240D7FFD00AB698F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC888839240D7FFD00AB698F /* AppDelegate.swift */; };
 		AC88883C240D7FFD00AB698F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88883B240D7FFD00AB698F /* SceneDelegate.swift */; };
-		AC88883E240D7FFD00AB698F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88883D240D7FFD00AB698F /* ViewController.swift */; };
-		AC888841240D7FFD00AB698F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC88883F240D7FFD00AB698F /* Main.storyboard */; };
 		AC888843240D7FFE00AB698F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC888842240D7FFE00AB698F /* Assets.xcassets */; };
 		AC888846240D7FFE00AB698F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC888844240D7FFE00AB698F /* LaunchScreen.storyboard */; };
-		AC888851240D7FFE00AB698F /* Perfect_BeerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC888850240D7FFE00AB698F /* Perfect_BeerTests.swift */; };
+		AC88885F240D82D700AB698F /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88885E240D82D700AB698F /* Beer.swift */; };
+		AC888861240D867300AB698F /* BeerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC888860240D867300AB698F /* BeerTests.swift */; };
+		AC888864240D99AB00AB698F /* DateFormatter+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC888863240D99AB00AB698F /* DateFormatter+Custom.swift */; };
+		AC888871240ED35900AB698F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88886F240ED35900AB698F /* SearchViewController.swift */; };
+		AC888872240ED35900AB698F /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC888870240ED35900AB698F /* SearchViewController.xib */; };
+		AC888876240ED85700AB698F /* PunkAPIConsumerAlamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC888875240ED85700AB698F /* PunkAPIConsumerAlamofire.swift */; };
+		AC888878240EDAD200AB698F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC888877240EDAD200AB698F /* Constants.swift */; };
+		AC88887B240EE47B00AB698F /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88887A240EE47B00AB698F /* Repository.swift */; };
+		AC88887D240EE64C00AB698F /* PunkAPIConsumable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88887C240EE64C00AB698F /* PunkAPIConsumable.swift */; };
+		AC88887F240EEB5800AB698F /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88887E240EEB5800AB698F /* SearchPresenter.swift */; };
+		AC888881240EEBD800AB698F /* SearchProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC888880240EEBD800AB698F /* SearchProtocols.swift */; };
+		BD84A6922F569B24506D507F /* Pods_Perfect_Beer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB71ACE5CEEEC626E8FD28A /* Pods_Perfect_Beer.framework */; };
+		DD249AC893A7034EE78448F9 /* Pods_Perfect_BeerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16ED8D99C6570136EBD0B963 /* Pods_Perfect_BeerTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +37,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07CEFE23F2C9059F4E4949C1 /* Pods-Perfect Beer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Perfect Beer.debug.xcconfig"; path = "Target Support Files/Pods-Perfect Beer/Pods-Perfect Beer.debug.xcconfig"; sourceTree = "<group>"; };
+		16ED8D99C6570136EBD0B963 /* Pods_Perfect_BeerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Perfect_BeerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DF5F77CDE70BE37A9232466 /* Pods-Perfect BeerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Perfect BeerTests.release.xcconfig"; path = "Target Support Files/Pods-Perfect BeerTests/Pods-Perfect BeerTests.release.xcconfig"; sourceTree = "<group>"; };
+		4FB71ACE5CEEEC626E8FD28A /* Pods_Perfect_Beer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Perfect_Beer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC888836240D7FFD00AB698F /* Perfect Beer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Perfect Beer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC888839240D7FFD00AB698F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC88883B240D7FFD00AB698F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AC88883D240D7FFD00AB698F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AC888840240D7FFD00AB698F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC888842240D7FFE00AB698F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC888845240D7FFE00AB698F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC888847240D7FFE00AB698F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC88884C240D7FFE00AB698F /* Perfect BeerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Perfect BeerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC888850240D7FFE00AB698F /* Perfect_BeerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfect_BeerTests.swift; sourceTree = "<group>"; };
 		AC888852240D7FFE00AB698F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC88885E240D82D700AB698F /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
+		AC888860240D867300AB698F /* BeerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerTests.swift; sourceTree = "<group>"; };
+		AC888863240D99AB00AB698F /* DateFormatter+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Custom.swift"; sourceTree = "<group>"; };
+		AC88886F240ED35900AB698F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		AC888870240ED35900AB698F /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		AC888875240ED85700AB698F /* PunkAPIConsumerAlamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunkAPIConsumerAlamofire.swift; sourceTree = "<group>"; };
+		AC888877240EDAD200AB698F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AC88887A240EE47B00AB698F /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		AC88887C240EE64C00AB698F /* PunkAPIConsumable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunkAPIConsumable.swift; sourceTree = "<group>"; };
+		AC88887E240EEB5800AB698F /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		AC888880240EEBD800AB698F /* SearchProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProtocols.swift; sourceTree = "<group>"; };
+		BCCB217A70D604BE2B79FA83 /* Pods-Perfect Beer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Perfect Beer.release.xcconfig"; path = "Target Support Files/Pods-Perfect Beer/Pods-Perfect Beer.release.xcconfig"; sourceTree = "<group>"; };
+		F8709F5D82B42F7021BBCAA1 /* Pods-Perfect BeerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Perfect BeerTests.debug.xcconfig"; path = "Target Support Files/Pods-Perfect BeerTests/Pods-Perfect BeerTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD84A6922F569B24506D507F /* Pods_Perfect_Beer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +77,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD249AC893A7034EE78448F9 /* Pods_Perfect_BeerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1435173CA531A12B7E550466 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				07CEFE23F2C9059F4E4949C1 /* Pods-Perfect Beer.debug.xcconfig */,
+				BCCB217A70D604BE2B79FA83 /* Pods-Perfect Beer.release.xcconfig */,
+				F8709F5D82B42F7021BBCAA1 /* Pods-Perfect BeerTests.debug.xcconfig */,
+				2DF5F77CDE70BE37A9232466 /* Pods-Perfect BeerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		24E229A8E4F2A135429719FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4FB71ACE5CEEEC626E8FD28A /* Pods_Perfect_Beer.framework */,
+				16ED8D99C6570136EBD0B963 /* Pods_Perfect_BeerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AC88882D240D7FFD00AB698F = {
 			isa = PBXGroup;
 			children = (
 				AC888838240D7FFD00AB698F /* Perfect Beer */,
 				AC88884F240D7FFE00AB698F /* Perfect BeerTests */,
 				AC888837240D7FFD00AB698F /* Products */,
+				1435173CA531A12B7E550466 /* Pods */,
+				24E229A8E4F2A135429719FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,10 +127,13 @@
 		AC888838240D7FFD00AB698F /* Perfect Beer */ = {
 			isa = PBXGroup;
 			children = (
+				AC888862240D96B300AB698F /* Extensions */,
+				AC88885C240D820400AB698F /* Models */,
+				AC888869240ED0E500AB698F /* Networking */,
+				AC888879240EE42700AB698F /* Repository */,
+				AC88886B240ED25600AB698F /* Screens */,
 				AC888839240D7FFD00AB698F /* AppDelegate.swift */,
 				AC88883B240D7FFD00AB698F /* SceneDelegate.swift */,
-				AC88883D240D7FFD00AB698F /* ViewController.swift */,
-				AC88883F240D7FFD00AB698F /* Main.storyboard */,
 				AC888842240D7FFE00AB698F /* Assets.xcassets */,
 				AC888844240D7FFE00AB698F /* LaunchScreen.storyboard */,
 				AC888847240D7FFE00AB698F /* Info.plist */,
@@ -93,10 +144,95 @@
 		AC88884F240D7FFE00AB698F /* Perfect BeerTests */ = {
 			isa = PBXGroup;
 			children = (
-				AC888850240D7FFE00AB698F /* Perfect_BeerTests.swift */,
 				AC888852240D7FFE00AB698F /* Info.plist */,
+				AC888860240D867300AB698F /* BeerTests.swift */,
 			);
 			path = "Perfect BeerTests";
+			sourceTree = "<group>";
+		};
+		AC88885C240D820400AB698F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AC88885E240D82D700AB698F /* Beer.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AC888862240D96B300AB698F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AC888863240D99AB00AB698F /* DateFormatter+Custom.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AC888869240ED0E500AB698F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				AC888875240ED85700AB698F /* PunkAPIConsumerAlamofire.swift */,
+				AC888877240EDAD200AB698F /* Constants.swift */,
+				AC88887C240EE64C00AB698F /* PunkAPIConsumable.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		AC88886B240ED25600AB698F /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				AC88886D240ED26B00AB698F /* Detail */,
+				AC88886C240ED26400AB698F /* Search */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		AC88886C240ED26400AB698F /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				AC888873240ED47E00AB698F /* Presenter */,
+				AC888874240ED48700AB698F /* Protocols */,
+				AC88886E240ED2D200AB698F /* View */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		AC88886D240ED26B00AB698F /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		AC88886E240ED2D200AB698F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AC88886F240ED35900AB698F /* SearchViewController.swift */,
+				AC888870240ED35900AB698F /* SearchViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AC888873240ED47E00AB698F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				AC88887E240EEB5800AB698F /* SearchPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		AC888874240ED48700AB698F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				AC888880240EEBD800AB698F /* SearchProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		AC888879240EE42700AB698F /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				AC88887A240EE47B00AB698F /* Repository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,9 +242,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC888855240D7FFE00AB698F /* Build configuration list for PBXNativeTarget "Perfect Beer" */;
 			buildPhases = (
+				586B86FBB22AD686623E23BA /* [CP] Check Pods Manifest.lock */,
 				AC888832240D7FFD00AB698F /* Sources */,
 				AC888833240D7FFD00AB698F /* Frameworks */,
 				AC888834240D7FFD00AB698F /* Resources */,
+				AF336390911D19E1958A6D67 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +261,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC888858240D7FFE00AB698F /* Build configuration list for PBXNativeTarget "Perfect BeerTests" */;
 			buildPhases = (
+				D26BF34C5EA0413744857551 /* [CP] Check Pods Manifest.lock */,
 				AC888848240D7FFE00AB698F /* Sources */,
 				AC888849240D7FFE00AB698F /* Frameworks */,
 				AC88884A240D7FFE00AB698F /* Resources */,
@@ -182,7 +321,7 @@
 			files = (
 				AC888846240D7FFE00AB698F /* LaunchScreen.storyboard in Resources */,
 				AC888843240D7FFE00AB698F /* Assets.xcassets in Resources */,
-				AC888841240D7FFD00AB698F /* Main.storyboard in Resources */,
+				AC888872240ED35900AB698F /* SearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,14 +334,86 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		586B86FBB22AD686623E23BA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Perfect Beer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF336390911D19E1958A6D67 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Perfect Beer/Pods-Perfect Beer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Perfect Beer/Pods-Perfect Beer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Perfect Beer/Pods-Perfect Beer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D26BF34C5EA0413744857551 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Perfect BeerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AC888832240D7FFD00AB698F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC88883E240D7FFD00AB698F /* ViewController.swift in Sources */,
+				AC88887D240EE64C00AB698F /* PunkAPIConsumable.swift in Sources */,
+				AC888871240ED35900AB698F /* SearchViewController.swift in Sources */,
+				AC88887F240EEB5800AB698F /* SearchPresenter.swift in Sources */,
+				AC888881240EEBD800AB698F /* SearchProtocols.swift in Sources */,
+				AC888876240ED85700AB698F /* PunkAPIConsumerAlamofire.swift in Sources */,
 				AC88883A240D7FFD00AB698F /* AppDelegate.swift in Sources */,
+				AC88887B240EE47B00AB698F /* Repository.swift in Sources */,
+				AC888878240EDAD200AB698F /* Constants.swift in Sources */,
 				AC88883C240D7FFD00AB698F /* SceneDelegate.swift in Sources */,
+				AC88885F240D82D700AB698F /* Beer.swift in Sources */,
+				AC888864240D99AB00AB698F /* DateFormatter+Custom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +421,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC888851240D7FFE00AB698F /* Perfect_BeerTests.swift in Sources */,
+				AC888861240D867300AB698F /* BeerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,14 +436,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AC88883F240D7FFD00AB698F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AC888840240D7FFD00AB698F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AC888844240D7FFE00AB698F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -360,6 +563,7 @@
 		};
 		AC888856240D7FFE00AB698F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07CEFE23F2C9059F4E4949C1 /* Pods-Perfect Beer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -378,6 +582,7 @@
 		};
 		AC888857240D7FFE00AB698F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCCB217A70D604BE2B79FA83 /* Pods-Perfect Beer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -396,6 +601,7 @@
 		};
 		AC888859240D7FFE00AB698F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8709F5D82B42F7021BBCAA1 /* Pods-Perfect BeerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -418,6 +624,7 @@
 		};
 		AC88885A240D7FFE00AB698F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DF5F77CDE70BE37A9232466 /* Pods-Perfect BeerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
