@@ -3,11 +3,13 @@
 
 target 'Perfect Beer' do
   # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
+  # use_frameworks!
+  use_modular_headers!
 
   # Pods for Perfect Beer
 
   pod 'Alamofire'
+  pod 'SDWebImage'
 
   target 'Perfect BeerTests' do
     inherit! :search_paths

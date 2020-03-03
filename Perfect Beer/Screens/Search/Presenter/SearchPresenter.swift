@@ -21,7 +21,12 @@ final class SearchPresenter {
 
 extension SearchPresenter: SearchPresenterProtocol {
     func getSearchedBeerList(by food: String) {
-        searchService.getBeersWithPairing(food: food, success: <#T##([Beer]) -> Void#>, failure: <#T##(Error?) -> Void#>)
+        searchService.getBeersWithPairing(food: food, success: { [weak self] (beerList) in
+            // TODO: Controlar si la lista se devuelve vacía
+            self?.ui?.setBeerList(with: beerList)
+        }, failure: { [weak self] (error) in
+            // TODO: Mostrar error
+        })
     }
     
 }

@@ -22,8 +22,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         
+        let searchView = Assembler.provideSearchView()
         window?.makeKeyAndVisible()
-        //window?.rootViewController =
+        window?.rootViewController = searchView
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
