@@ -10,8 +10,11 @@ import Foundation
 
 protocol SearchViewProtocol: AnyObject {
     func setBeerList(with beers: [Beer])
+    func setEmptyView()
+    func setErrorView()
 }
 
 protocol SearchPresenterProtocol: AnyObject {
     func getSearchedBeerList(by food: String)
+    func getFirstBeersList()
 }

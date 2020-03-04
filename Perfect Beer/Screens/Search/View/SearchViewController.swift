@@ -8,10 +8,43 @@
 
 import UIKit
 
+enum SearchViewState {
+    case loading
+    case error
+    case success
+    case empty
+}
+
 class SearchViewController: UIViewController {
     
     // MARK: Properties
     var model: [Beer] = []
+    
+    var state: SearchViewState! {
+        didSet {
+            switch state {
+            case .empty:
+                stateView.isHidden = false
+                infoView.isHidden = false
+                infoImage.image = UIImage(systemName: "info.circle.fill")
+                infoImage.tintColor = UIColor.systemBlue
+                infoLabel.text = "There aren't beers that fit the search"
+            case .error:
+                stateView.isHidden = false
+                infoView.isHidden = false
+                infoImage.image = UIImage(systemName: "xmark.circle.fill")
+                infoImage.tintColor = UIColor.systemRed
+                infoLabel.text = "There was a problem loading beers list"
+            case .success:
+                stateView.isHidden = true
+            case .loading:
+                stateView.isHidden = false
+                infoView.isHidden = true
+            case .none:
+                stateView.isHidden = true
+            }
+        }
+    }
     
     // MARK: Presenter elements
     public private(set) var presenter: SearchPresenterProtocol!
@@ -28,14 +61,21 @@ class SearchViewController: UIViewController {
             beerTableView.register(nib, forCellReuseIdentifier: SearchTableViewCell.defaultReusableId)
         }
     }
+    @IBOutlet weak var stateView: UIView!
+    @IBOutlet weak var infoView: UIView!
+    @IBOutlet weak var infoImage: UIImageView!
+    @IBOutlet weak var infoLabel: UILabel!
     
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        state = .loading
         beerTableView.dataSource = self
         beerTableView.delegate = self
         beerSearchBar.delegate = self
+        
+        presenter.getFirstBeersList()
     }
 
 }
@@ -64,20 +104,35 @@ extension SearchViewController: UITableViewDataSource {
         }
         let beer = model[indexPath.item]
         cell.model = beer
+        cell.selectionStyle = .none
         return cell
     }
 }
 
 extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        presenter.getSearchedBeerList(by: searchText)
+        state = .loading
+        if searchText.count == 0 {
+            presenter.getFirstBeersList()
+        } else {
+            presenter.getSearchedBeerList(by: searchText)
+        }
     }
 }
 
 extension SearchViewController: SearchViewProtocol {
+    func setErrorView() {
+        state = .error
+    }
+    
+    func setEmptyView() {
+        state = .empty
+    }
+    
     func setBeerList(with beers: [Beer]) {
         model = beers
         beerTableView.reloadData()
+        state = .success
     }
 }
 

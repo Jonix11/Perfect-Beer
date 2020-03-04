@@ -10,6 +10,22 @@ import Foundation
 import Alamofire
 
 class PunkAPIConsumerAlamofire: PunkAPIConsumable {
+    func getFirstBeers(onSuccess success: @escaping ([Beer]) -> Void, failure: @escaping (Error?) -> Void) {
+        Alamofire.request(PunkAPIConstant.getBeersURL()).responseData { (response) in
+            switch response.result {
+            case .failure(let error):
+                failure(error)
+            case .success(let data):
+                do {
+                    let decoder = JSONDecoder()
+                    let searchedBeers = try decoder.decode([Beer].self, from: data)
+                    success(searchedBeers)
+                } catch {
+                    failure(error)
+                }
+            }
+        }
+    }
     
     func getSearchedBeers(by food: String, success: @escaping ([Beer]) -> Void, failure: @escaping (Error?) -> Void) {
         let foodUnderscored = food.replacingOccurrences(of: " ", with: "_")

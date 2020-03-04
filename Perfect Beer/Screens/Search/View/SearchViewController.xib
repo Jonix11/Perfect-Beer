@@ -11,6 +11,10 @@
             <connections>
                 <outlet property="beerSearchBar" destination="Gjv-V2-GET" id="kSv-Gg-Fsi"/>
                 <outlet property="beerTableView" destination="4Yz-Sv-FLV" id="Fst-Mo-w9A"/>
+                <outlet property="infoImage" destination="gDb-I5-SB9" id="zd1-oq-9hS"/>
+                <outlet property="infoLabel" destination="NEI-tq-edS" id="23b-ir-0Dt"/>
+                <outlet property="infoView" destination="LOx-mI-ndZ" id="9RC-rM-hao"/>
+                <outlet property="stateView" destination="Jr3-S5-VPG" id="jQx-kf-MGL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,7 +23,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Gjv-V2-GET">
+                <searchBar contentMode="redraw" placeholder="Enter food for pairing" translatesAutoresizingMaskIntoConstraints="NO" id="Gjv-V2-GET">
                     <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="52r-1A-XNv"/>
@@ -30,13 +34,60 @@
                     <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jr3-S5-VPG" userLabel="stateView">
+                    <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Sqd-RJ-PPa">
+                            <rect key="frame" x="188.5" y="368.5" width="37" height="37"/>
+                        </activityIndicatorView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LOx-mI-ndZ" userLabel="infoView">
+                            <rect key="frame" x="0.0" y="312" width="414" height="150"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gDb-I5-SB9">
+                                    <rect key="frame" x="182" y="0.5" width="50" height="49"/>
+                                    <color key="tintColor" red="0.94517856840000003" green="0.083999268710000005" blue="0.1625331938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="50" id="Iqm-5f-q9b"/>
+                                        <constraint firstAttribute="height" constant="50" id="Ju6-Q5-uLn"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEI-tq-edS">
+                                    <rect key="frame" x="183.5" y="58" width="47" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="NEI-tq-edS" firstAttribute="top" secondItem="gDb-I5-SB9" secondAttribute="bottom" constant="8" id="003-Z5-J6O"/>
+                                <constraint firstItem="gDb-I5-SB9" firstAttribute="centerX" secondItem="LOx-mI-ndZ" secondAttribute="centerX" id="5H6-Du-YiI"/>
+                                <constraint firstItem="gDb-I5-SB9" firstAttribute="top" secondItem="LOx-mI-ndZ" secondAttribute="top" id="8kw-ti-JzH"/>
+                                <constraint firstAttribute="height" constant="150" id="8li-2V-2Nj"/>
+                                <constraint firstItem="NEI-tq-edS" firstAttribute="centerX" secondItem="LOx-mI-ndZ" secondAttribute="centerX" id="Rgd-bX-qNz"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="LOx-mI-ndZ" secondAttribute="trailing" id="62E-sG-fdZ"/>
+                        <constraint firstItem="Sqd-RJ-PPa" firstAttribute="centerY" secondItem="Jr3-S5-VPG" secondAttribute="centerY" id="YlM-dS-9fS"/>
+                        <constraint firstItem="LOx-mI-ndZ" firstAttribute="leading" secondItem="Jr3-S5-VPG" secondAttribute="leading" id="ab8-bE-15f"/>
+                        <constraint firstItem="Sqd-RJ-PPa" firstAttribute="centerX" secondItem="Jr3-S5-VPG" secondAttribute="centerX" id="dxY-pl-gh6"/>
+                        <constraint firstItem="LOx-mI-ndZ" firstAttribute="centerY" secondItem="Jr3-S5-VPG" secondAttribute="centerY" id="fLF-7l-gG1"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="4Yz-Sv-FLV" firstAttribute="top" secondItem="Gjv-V2-GET" secondAttribute="bottom" symbolic="YES" id="06Q-3p-9fb"/>
+                <constraint firstItem="Jr3-S5-VPG" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="0ey-qH-3hZ"/>
+                <constraint firstItem="Jr3-S5-VPG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="COc-Vs-h65"/>
                 <constraint firstItem="Gjv-V2-GET" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Gpa-zy-NwQ"/>
                 <constraint firstItem="4Yz-Sv-FLV" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="LKs-Wa-YOp"/>
                 <constraint firstItem="Gjv-V2-GET" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Wgf-4a-Qgl"/>
+                <constraint firstItem="Jr3-S5-VPG" firstAttribute="top" secondItem="Gjv-V2-GET" secondAttribute="bottom" symbolic="YES" id="b2g-J4-r5W"/>
+                <constraint firstItem="Jr3-S5-VPG" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="fKY-oB-W2k"/>
                 <constraint firstItem="Gjv-V2-GET" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hlB-cl-bMm"/>
                 <constraint firstItem="4Yz-Sv-FLV" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="uU2-qA-Mcx"/>
                 <constraint firstItem="4Yz-Sv-FLV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="zQF-OU-5Ls"/>
@@ -45,4 +96,7 @@
             <point key="canvasLocation" x="131.8840579710145" y="152.67857142857142"/>
         </view>
     </objects>
+    <resources>
+        <image name="xmark.circle.fill" catalog="system" width="64" height="60"/>
+    </resources>
 </document>

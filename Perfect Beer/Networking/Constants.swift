@@ -10,6 +10,15 @@ import Foundation
 
 struct PunkAPIConstant {
     
+    static func getBeersURL() -> URL {
+        var components = URLComponents()
+        components.scheme = "https"
+        components.host = "api.punkapi.com"
+        components.path = "/v2/beers"
+        
+        return components.url!
+    }
+    
     static func getBeersURL(by food: String) -> URL {
         var components = URLComponents()
         components.scheme = "https"
