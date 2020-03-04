@@ -55,7 +55,8 @@ class DetailViewController: UIViewController {
         
         toolbar.barStyle = .default
         let cancelAction = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(dismissView))
-        toolbar.items = [cancelAction]
+        let flexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
+        toolbar.items = [flexible,cancelAction]
         
         if let image = model.image {
             let url = URL(string: image)
