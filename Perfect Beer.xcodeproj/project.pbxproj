@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,6 +27,8 @@
 		AC888885240EF00900AB698F /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC888883240EF00900AB698F /* SearchTableViewCell.swift */; };
 		AC888886240EF00900AB698F /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC888884240EF00900AB698F /* SearchTableViewCell.xib */; };
 		AC888889240F03B800AB698F /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC888888240F03B800AB698F /* Assembly.swift */; };
+		AC88888F240FE9CA00AB698F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88888D240FE9CA00AB698F /* DetailViewController.swift */; };
+		AC888890240FE9CA00AB698F /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC88888E240FE9CA00AB698F /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		AC888883240EF00900AB698F /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		AC888884240EF00900AB698F /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		AC888888240F03B800AB698F /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
+		AC88888D240FE9CA00AB698F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		AC88888E240FE9CA00AB698F /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		B5B3268AA431BB839084C1F4 /* libPods-Perfect BeerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Perfect BeerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCCB217A70D604BE2B79FA83 /* Pods-Perfect Beer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Perfect Beer.release.xcconfig"; path = "Target Support Files/Pods-Perfect Beer/Pods-Perfect Beer.release.xcconfig"; sourceTree = "<group>"; };
 		F8709F5D82B42F7021BBCAA1 /* Pods-Perfect BeerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Perfect BeerTests.debug.xcconfig"; path = "Target Support Files/Pods-Perfect BeerTests/Pods-Perfect BeerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -205,6 +209,7 @@
 		AC88886D240ED26B00AB698F /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				AC88888A240FE97D00AB698F /* View */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -258,6 +263,15 @@
 				AC888888240F03B800AB698F /* Assembly.swift */,
 			);
 			path = Assembler;
+			sourceTree = "<group>";
+		};
+		AC88888A240FE97D00AB698F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AC88888D240FE9CA00AB698F /* DetailViewController.swift */,
+				AC88888E240FE9CA00AB698F /* DetailViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,6 +359,7 @@
 			files = (
 				AC888846240D7FFE00AB698F /* LaunchScreen.storyboard in Resources */,
 				AC888886240EF00900AB698F /* SearchTableViewCell.xib in Resources */,
+				AC888890240FE9CA00AB698F /* DetailViewController.xib in Resources */,
 				AC888843240D7FFE00AB698F /* Assets.xcassets in Resources */,
 				AC888872240ED35900AB698F /* SearchViewController.xib in Resources */,
 			);
@@ -424,6 +439,7 @@
 				AC888885240EF00900AB698F /* SearchTableViewCell.swift in Sources */,
 				AC88885F240D82D700AB698F /* Beer.swift in Sources */,
 				AC888864240D99AB00AB698F /* DateFormatter+Custom.swift in Sources */,
+				AC88888F240FE9CA00AB698F /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

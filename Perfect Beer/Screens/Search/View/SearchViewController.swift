@@ -44,6 +44,13 @@ extension SearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 160
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let beer = model[indexPath.row]
+        
+        let detailViewController = DetailViewController(model: beer)
+        self.present(detailViewController, animated: true)
+    }
 }
 
 extension SearchViewController: UITableViewDataSource {
@@ -63,12 +70,7 @@ extension SearchViewController: UITableViewDataSource {
 
 extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
         presenter.getSearchedBeerList(by: searchText)
-        
-//        let alert = UIAlertController(title: searchText, message: "", preferredStyle: .alert)
-//        alert.addAction(UIAlertAction(title: "Accept", style: .default, handler: nil))
-//        self.present(alert, animated: true)
     }
 }
 
